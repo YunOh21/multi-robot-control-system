@@ -10,7 +10,7 @@ For a full project description, please refer to the README of the forked reposit
 
 ---
 
-## Role in the Project
+## My Role in the Project
 - Designing scenarios for task planning
 - Setting up ROS Domain Bridge for multi-robot control
 - Writing communication interfaces between the control system, robot system, and GUI
@@ -37,23 +37,23 @@ December 26, 2023 - January 25, 2024
 
 ### Multi-Robot Control
 <p align=center width="98%">
-  <img src="./images/multi_robot_control.PNG">
+  <img src="./images/multi_robot_en.PNG">
 </p>
 
 ### Task Planning
 #### Task Request Scenario
 <p align=center width="98%">
-  <img src="./images/task_req.png">
+  <img src="./images/task_request_en.png">
 </p>
 
 #### Task Scheduling Scenario
 <p align=center width="98%">
-  <img src="./images/task_skd.png">
+  <img src="./images/task_scheduling_en.png">
 </p>
 
 #### Task Execution Scenario
 <p align=center width="98%">
-  <img src="./images/task_run.png">
+  <img src="./images/task_execution_en.png">
 </p>
 
 ### Navigation
@@ -61,6 +61,12 @@ December 26, 2023 - January 25, 2024
 <p align=center width="98%">
   <img src="./images/BT.png">
 </p>
+
+- Based on a behavior tree provided by nav2 (https://navigation.ros.org/behavior_trees/trees/nav_to_pose_and_pause_near_goal_obstacle.html), this BT:
+  - Modifies the reactive fallback condition to 'IsStuck' (replacing 'GoalUpdated'), due to:
+    - The goal not being updated during navigation in this project.
+  - Incorporates 'DriveOnHeading' into the RoundRobin sequence to address these challenges, due to:
+    - The robot's occasional inability to move, even in the absence of obstacles, where actions such as 'backup', 'wait', or 'spin' do not resolve the situation.
 
 ---
 
