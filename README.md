@@ -65,7 +65,7 @@ December 26, 2023 - January 25, 2024
 - Based on a behavior tree provided by nav2 (https://navigation.ros.org/behavior_trees/trees/nav_to_pose_and_pause_near_goal_obstacle.html), this BT:
   - Modifies the reactive fallback condition to 'IsStuck' (replacing 'GoalUpdated'), due to:
     - The goal not being updated during navigation in this project.
-  - Incorporates 'DriveOnHeading' into the RoundRobin sequence to address these challenges, due to:
+  - Incorporates 'DriveOnHeading' into the RoundRobin sequence due to:
     - The robot's occasional inability to move, even in the absence of obstacles, where actions such as 'backup', 'wait', or 'spin' do not resolve the situation.
 
 ---
