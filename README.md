@@ -37,7 +37,7 @@ December 26, 2023 - January 25, 2024
 
 ### Multi-Robot Control
 <p align=center width="98%">
-  <img src="./images/multi_robot_en.PNG">
+  <img src="./images/multi_robot_control_en.png">
 </p>
 
 ### Task Planning
